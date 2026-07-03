@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário, Meu Amor! ❤️</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 100%);
+        }
+        .font-romantic { font-family: 'Dancing Script', cursive; }
+        .heart {
+            position: absolute;
+            color: #f43f5e;
+            animation: float 4s linear infinite;
+            opacity: 0;
+            pointer-events: none;
+        }
+        @keyframes float {
+            0% { transform: translateY(105vh) scale(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-10vh) scale(1.3) rotate(360deg); opacity: 0; }
+        }
+        .photo-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .photo-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgb(244 63 94 / 0.15), 0 8px 10px -6px rgb(244 63 94 / 0.15);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-between overflow-x-hidden relative selection:bg-rose-200 selection:text-rose-900">
+
+    <div id="hearts-container" class="absolute inset-0 pointer-events-none z-0 overflow-hidden"></div>
+
+    <header class="text-center my-12 md:my-16 z-10 px-4">
+        <span class="text-xs font-semibold tracking-widest text-rose-500 uppercase bg-rose-50 px-4 py-1.5 rounded-full border border-rose-100">03 de Julho • O Dia Dela</span>
+        <h1 class="text-5xl md:text-7xl font-romantic text-rose-600 drop-shadow-sm mt-4 animate-fade-in">
+            Feliz Aniversário, Minha Princesa! ❤️
+        </h1>
+        <p class="text-slate-600 mt-3 tracking-wide font-light max-w-md mx-auto text-sm md:text-base">
+            Hoje o universo celebra a existência da mulher mais incrível que já conheci.
+        </p>
+    </header>
+
+    <main class="w-full max-w-4xl px-4 z-10 space-y-16 mb-16">
+        
+        <section class="bg-white/70 backdrop-blur-md p-6 md:p-8 rounded-3xl shadow-xl shadow-rose-100/40 border border-white/80">
+            <h2 class="text-center font-romantic text-4xl text-rose-500 mb-6">A dona do meu sorriso mais sincero</h2>
+            <div class="flex justify-center">
+                <div class="photo-card overflow-hidden rounded-2xl w-full max-w-md aspect-[3/4] bg-slate-100 shadow-md">
+                    <img src="IMG_3690AD27-5A7A-4A78-BEB2-C305A12531D8.jpg" alt="Ela" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <section class="text-center py-8 px-6 bg-gradient-to-br from-rose-50/90 to-pink-50/90 backdrop-blur-sm rounded-3xl shadow-md border border-rose-100 max-w-xl mx-auto flex flex-col items-center">
+            <span class="text-3xl mb-2 animate-bounce">🎂</span>
+            <h3 class="text-xl font-semibold text-rose-800">Hora de fazer um pedido...</h3>
+            <p class="text-xs text-slate-500 mt-1 mb-5">Clique no botão mágico para comemorar em grande estilo!</p>
+            <button id="btn-celebrar" class="bg-gradient-to-r from-rose-500 to-pink-500 text-white font-medium text-sm px-8 py-3.5 rounded-full shadow-lg shadow-rose-500/20 hover:from-rose-600 hover:to-pink-600 transform hover:-translate-y-0.5 active:translate-y-0 transition duration-200 cursor-pointer tracking-wider">
+                ✨ ACENDER AS VELAS ✨
+            </button>
+        </section>
+
+        <section class="bg-white/70 backdrop-blur-md p-6 md:p-8 rounded-3xl shadow-xl shadow-rose-100/40 border border-white/80 space-y-8">
+            <h2 class="text-center font-romantic text-4xl text-rose-500">Nossos Melhores Momentos</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="photo-card overflow-hidden rounded-2xl aspect-[3/4] bg-slate-100 shadow-md">
+                    <img src="IMG_2212.jpg" alt="Momento nosso" class="w-full h-full object-cover">
+                </div>
+                <div class="photo-card overflow-hidden rounded-2xl aspect-[3/4] bg-slate-100 shadow-md">
+                    <img src="IMG_2148.jpg" alt="Momento nosso" class="w-full h-full object-cover">
+                </div>
+                <div class="photo-card overflow-hidden rounded-2xl aspect-[3/4] bg-slate-100 shadow-md">
+                    <img src="IMG_1886.jpg" alt="Momento nosso" class="w-full h-full object-cover">
+                </div>
+                <div class="photo-card overflow-hidden rounded-2xl aspect-[3/4] bg-slate-100 shadow-md">
+                    <img src="IMG_1883.jpg" alt="Momento nosso" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="photo-card overflow-hidden rounded-2xl aspect-video max-w-2xl mx-auto bg-slate-100 shadow-md mt-6">
+                <img src="IMG_0843.jpg" alt="Nosso jantar especial" class="w-full h-full object-cover">
+            </div>
+
+            <div class="pt-8 border-t border-rose-100/60 text-slate-700 space-y-4 leading-relaxed text-center max-w-xl mx-auto text-sm md:text-base">
+                <p class="italic text-rose-700 font-medium text-lg">
+                    "Meu amor, hoje o mundo celebra o dia em que a pessoa mais incrível dele nasceu..."
+                </p>
+                <p>
+                    Olhar para cada uma dessas fotos me faz lembrar o quanto sou sortudo. Cada sorriso seu, cada abraço e cada olhar carinhoso dão sentido à minha vida. Você tem essa luz única que transforma qualquer dia comum em um momento inesquecível.
+                </p>
+                <p>
+                    Obrigado por ser minha companheira, minha melhor amiga e o amor da minha vida. Que o seu novo ciclo seja repleto de conquistas, gargalhadas e sonhos realizados. Eu estarei aqui para aplaudir e segurar sua mão em cada um deles.
+                </p>
+                <p class="font-romantic text-4xl text-rose-600 pt-2">
+                    Te amo daqui até a eternidade. Feliz Aniversário! ❤️
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full text-center py-5 bg-rose-600 text-white/90 font-light text-xs tracking-wider z-10 shadow-inner">
+        Feito com todo o amor do mundo para a minha namorada linda • 2026
+    </footer>
+
+    <script>
+        // Confetes Premium Interativos
+        document.getElementById('btn-celebrar').addEventListener('click', () => {
+            var duration = 4 * 1000;
+            var end = Date.now() + duration;
+
+            (function frame() {
+                confetti({ particleCount: 3, angle: 60, spread: 55, origin: { x: 0 }, colors: ['#f43f5e', '#f472b6', '#fff'] });
+                confetti({ particleCount: 3, angle: 120, spread: 55, origin: { x: 1 }, colors: ['#f43f5e', '#f472b6', '#fff'] });
+                if (Date.now() < end) { requestAnimationFrame(frame); }
+            }());
+
+            confetti({ particleCount: 150, spread: 80, origin: { y: 0.6 }, colors: ['#f43f5e', '#f472b6', '#fb7185'] });
+        });
+
+        // Corações flutuantes sutis em background
+        function createHeart() {
+            const container = document.getElementById('hearts-container');
+            if(container.childElementCount > 25) return; 
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+            heart.style.fontSize = Math.random() * 15 + 10 + 'px';
+            container.appendChild(heart);
+            setTimeout(() => heart.remove(), 4000);
+        }
+        setInterval(createHeart, 600);
+    </script>
+</body>
+</html>
